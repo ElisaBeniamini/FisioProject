@@ -1,1 +1,11 @@
 @import 'bootstrap';
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 10;
+    width: 100%;
+    background-color: rgba(58, 100, 183, 0.863);
+    color: white;
+    text-align: center;
+}
