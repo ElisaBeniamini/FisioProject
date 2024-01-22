@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PublicController::class, 'homepage'])
+    ->name('homepage');
+
+Route::get('/patologie', [PublicController::class, 'patologie'])
+    ->name('patologie');
+
+Route::get('/fisioterapia', [PublicController::class, 'fisioterapia'])
+    ->name('fisioterapia');
+
+Route::get('/domicilio', [PublicController::class, 'domicilio'])
+    ->name('domicilio');
+
+Route::get('/contatti', [PublicController::class, 'contatti'])
+    ->name('contatti');
