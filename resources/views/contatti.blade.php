@@ -15,7 +15,6 @@
                 <img src="https://via.placeholder.com/600x400" class="img-fluid" alt="Fisioterapista">
             </div>
         </div>
-
         <!-- Form di Invio Richiesta di Consulenza -->
         <div class="row">
             <div class="col-md-8 offset-md-2">

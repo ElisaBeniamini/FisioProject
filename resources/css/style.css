@@ -1,5 +1,5 @@
 .nav-item a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #06397b;
 
 }
@@ -10,50 +10,83 @@ body {
     overflow-x: hidden;
 }
 
-.nav-item a {
-    font-size: 1.2rem;
-    color: #06397b;
+.nav-item a:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-color: black;
 }
 
-.hero {
+.header-container {
     position: relative;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+
+    background: linear-gradient(to top, #E0E0E0, #F1F1F1, #FFFFFF);
+
+
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/public/images/imghome2.jpg') no-repeat center center;
-    background-size: cover;
-    opacity: 0.7;
-    z-index: -1;
+.header-ancora-corpo {
+    color: #FFFFFF;
+    text-decoration: none;
 }
+
+.body-zone {
+    position: absolute;
+    background-color: rgba(0, 87, 183, 0.8);
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.body-zone:hover {
+    background-color: rgba(0, 87, 183, 1);
+    transform: scale(1.1);
+}
+
+.body-zone::after {
+    content: attr(data-description);
+    position: absolute;
+    white-space: nowrap;
+    background-color: #88D8B0;
+    color: #333333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.body-zone:hover::after {
+    opacity: 1;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
 
 .header-words h1 {
     position: relative;
-    z-index: 1;
     font-size: 12vh;
+    color: #06397b;
 }
 
 .button-79 {
     backface-visibility: hidden;
-    background: #0951B0;
+    background: #88D8B0;
     border: 0;
     border-radius: .375rem;
     box-sizing: border-box;
-    color: #fff;
+    color: #06397b;
     cursor: pointer;
     display: inline-block;
-    font-family: Circular, Helvetica, sans-serif;
     font-size: 1.125rem;
     font-weight: 700;
     letter-spacing: -.01em;
@@ -67,6 +100,7 @@ body {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    will-change: transform;
 }
 
 .button-79:disabled {
@@ -75,11 +109,13 @@ body {
 }
 
 .button-79:not(:disabled):hover {
-    transform: scale(1.05);
+    transform: scale(1.05) translateZ(0);
+    font-weight: 700;
+    /* Mantieni costante il peso del font */
 }
 
 .button-79:not(:disabled):hover:active {
-    transform: scale(1.05) translateY(.125rem);
+    transform: scale(1.05) translateY(.125rem) translateZ(0);
 }
 
 .button-79:focus {
@@ -102,8 +138,11 @@ body {
 }
 
 .button-79:not(:disabled):active {
-    transform: translateY(.125rem);
+    transform: translateY(.125rem) translateZ(0);
+    font-weight: 700;
+    /* Mantieni costante il peso del font */
 }
+
 
 @media (max-width: 768px) {
     .hero {

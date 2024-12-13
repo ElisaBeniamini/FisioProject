@@ -7,7 +7,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mx-3">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li>
@@ -24,6 +24,10 @@
                     <a class="nav-link" href="{{ route('contatti') }}" tabindex="-1" aria-disabled="true">Contatti</a>
                 </li>
             </ul>
+        </div>
+        <div>
+            <a href="{{ route('contatti') }}" class="button-79 ">Prenota un visita di controllo</a>
+
         </div>
     </div>
     </div>
